@@ -31,11 +31,12 @@ otomatis atas pagu yang belum ditetapkan.
 - [x] Verifikasi LICENSE Paperclip (MIT) dari repo yang dipakai — terverifikasi 30 Okt 2026, commit clone b3c2172 (kini pola acuan Inti Perusahaan).
 - [x] Verifikasi LICENSE OpenMausBot (Apache-2.0) dari repo yang dipakai — terverifikasi 30 Okt 2026, versi 0.1.134, commit clone 0213b74 (kini pola acuan Mesin Desktop).
 - [ ] Verifikasi lisensi dependensi DeepBrain (pola Brain/agentic-stack); bila tidak memungkinkan, bangun ulang polanya tanpa menyalin kode yang lisensinya tidak jelas.
-- [ ] Keputusan jalur kode: fork lalu modifikasi vs bangun ulang bersih terinspirasi pola.
+- [x] Keputusan jalur kode — DIPUTUSKAN 30 Okt 2026: fork dulu lalu modifikasi. UI dan semua fungsi awal dipertahankan; modifikasi hanya bila Patria memerintahkan. Dimulai dari Paperclip sebagai rancangan organisasi utama Binder. Fork lokal: `~/workspace/binder-fork/paperclip` (commit b3c2172, bersih, tanpa modifikasi); destinasi fork remote belum diputuskan.
 - [ ] Pin versi DeepBrain MCP dan dependensi yang dipakai; pin upstream hanya bila jalur fork diputuskan.
 - [ ] Verifikasi harga sandbox (Modal/Daytona), Boat bila dipakai, dan langganan CLI.
 - [ ] Pagu total pilot — DITANGGUHKAN per keputusan Patria 30 Okt 2026 (bukan dibatalkan); dipatok setelah observasi kebutuhan riil.
 - [ ] Uji live jalur Meta lewat OpenCode di dalam aplikasi BINDER baru; catat lolos/gagal apa adanya. Bukti yang sudah ada baru panggilan API langsung di hackathon, bukan bukti jalur di dalam aplikasi baru.
+- [ ] Destinasi fork remote (nama repo) — menunggu konfirmasi Patria; tidak ditebak.
 - [ ] Vonis Patria: PRD v1.4 disetujui dan Gerbang Fase 0 lolos atau tidak.
 
 ## Clone inspeksi (selesai 30 Oktober 2026)
