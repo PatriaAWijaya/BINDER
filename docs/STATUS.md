@@ -67,3 +67,42 @@ DeepBrain nanti bersifat privat.
 
 - Kode aplikasi BINDER baru, Sync & Gate Internal, dan DeepBrain (dibangun setelah Gerbang Fase 0).
 - File LICENSE BINDER (belum diputuskan Patria).
+
+## Progres per fase/modul — diperbarui 30 Oktober 2026
+
+Legenda: [x] selesai, [~] sebagian, [ ] belum.
+
+### Fase 0 — Persetujuan dan Verifikasi
+- [~] 0A Persetujuan PRD — PRD v1.4 DRAF sudah ditulis dan dibaca-balik; vonis setuju/revisi dari Patria BELUM ada.
+- [~] 0B Gerbang Fase 0 — lisensi Paperclip MIT (b3c2172) dan OpenMausBot Apache-2.0 (0.1.134) terverifikasi; jalur kode DIPUTUSKAN (fork); pagu DITANGGUHKAN; fork remote dibuat. BELUM: verifikasi harga sandbox/Boat/CLI, pin DeepBrain MCP, uji live Meta di dalam aplikasi baru, dan vonis Gerbang lolos.
+
+### Fase 1 — Fondasi dan Modul Inti
+- [~] 1A Repo dan dokumen — repo PatriaAWijaya/BINDER PUBLIK; PRD v1.4 + 5 dokumen teknis v0.3 di Drive MIMI/BINDER dan terbaca-balik; repo fork PatriaAWijaya/BINDER-paperclip PUBLIK. BELUM: persetujuan PRD.
+- [ ] 1B Modul Inti Perusahaan + CEO — belum dibangun. Persiapan saja: fork lokal dari b3c2172, `pnpm install` lolos.
+- [ ] 1C DeepBrain Core + MCP/CLI — desain selesai (PRD Bab 8, README); kode BELUM dibangun. Aturan: desain boleh publik, kode/repo nanti PRIVAT.
+- [ ] 1D Sync & Gate Internal — desain/kontrak selesai; kode dan uji bypass BELUM.
+- [ ] 1E Mesin Desktop + VM — desain selesai; kode dan task desktop pilot BELUM.
+- [ ] 1F Routing model + QC + checkpoint swap — desain selesai; uji packet/QC BELUM.
+- [ ] 1G Roster spesialis (6 agen) — desain selesai; hire dan task kecil per agen BELUM.
+- [ ] 1H Distiller + Pocket pilot — desain selesai; siklus Distiller dan Pocket Main BELUM.
+- [ ] 1I Leads Generator rutin — desain selesai; Proposal Pack dan keputusan per kandidat BELUM.
+- [ ] 1J Ledger, audit, observabilitas — desain selesai; ledger terekonsiliasi BELUM.
+
+### Fase 2 — Pilot terintegrasi
+- [ ] 2A Operasi 2 minggu ledger nyata — BELUM.
+- [ ] 2B Vonis Fase 1 — BELUM.
+
+### Fase 3 — Go-live
+- [ ] 3A Stabilisasi 2–4 minggu — BELUM.
+- [ ] 3B Checklist go-live + pernyataan live — BELUM (live = beroperasi harian untuk Patria saja, bukan rilis publik).
+- [ ] 3C Runbook, cadangan, prosedur berhenti — BELUM (belum diuji).
+
+### Pasca-live — Fase 2 (per item, hanya dengan vonis)
+- [ ] Vendor recall tambahan, spin-off DeepBrain, agen/konektor tambahan, tinjau ulang pagu — BELUM, dan tidak dimulai sebelum live stabil.
+
+### Verifikasi baseline fork (di luar modul, dicatat jujur)
+- [x] `pnpm install --frozen-lockfile` lolos (6m28s).
+- [x] Typecheck paket lain lolos; pemeriksaan Rust paperclip-runner-core lolos (7 peringatan).
+- [ ] Typecheck server PENUH belum terbukti di VM ini (tsc server dimatikan exit 137 pada heap 4G dan 2G; swap tidak diizinkan) — harus dijalankan di MacBook Patria atau mesin bermemori lebih besar.
+- [ ] Test (`pnpm test:run`) dan build (`pnpm build`) baseline BELUM dijalankan.
+- [x] Modifikasi pertama fork: app icon Patria dipasang (lokal 2ab8810 ↔ remote 9a66d6a); tidak ada perubahan kode/fungsi.
