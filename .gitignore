@@ -1,0 +1,26 @@
+# Kredensial dan secret — tidak pernah masuk git
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+credentials.json
+secrets/
+
+# Dependensi dan build
+node_modules/
+target/
+dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data lokal dan workspace agen
+*.sqlite
+*.db
+*.wal
+*.shm
+minime-images/
+workspace-local/
