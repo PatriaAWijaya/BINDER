@@ -36,7 +36,7 @@ otomatis atas pagu yang belum ditetapkan.
 - [ ] Verifikasi harga sandbox (Modal/Daytona), Boat bila dipakai, dan langganan CLI.
 - [ ] Pagu total pilot — DITANGGUHKAN per keputusan Patria 30 Okt 2026 (bukan dibatalkan); dipatok setelah observasi kebutuhan riil.
 - [ ] Uji live jalur Meta lewat OpenCode di dalam aplikasi BINDER baru; catat lolos/gagal apa adanya. Bukti yang sudah ada baru panggilan API langsung di hackathon, bukan bukti jalur di dalam aplikasi baru.
-- [ ] Destinasi fork remote (nama repo) — menunggu konfirmasi Patria; tidak ditebak.
+- [x] Fork remote — DIBUAT 30 Okt 2026: PatriaAWijaya/BINDER-paperclip (https://github.com/PatriaAWijaya/BINDER-paperclip), fork dari paperclipai/paperclip, branch default master, HEAD master = b3c2172 (tree identik dengan baseline lokal; HEAD upstream saat fork dibuat sudah maju ke 81ebe47 dan sengaja di-reset ke baseline). Sifat: PUBLIK (fork dari repo publik). UI dan fungsi awal belum diubah.
 - [ ] Vonis Patria: PRD v1.4 disetujui dan Gerbang Fase 0 lolos atau tidak.
 
 ## Clone inspeksi (selesai 30 Oktober 2026)
