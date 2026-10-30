@@ -18,3 +18,5 @@ Desain v1 (PRD Bab 8):
 - Distiller (agen native DeepBrain) dan Pocket (distilasi + harness skill + protokol + versi dan skor) diatur di PRD Bab 8.9; hanya versi Main satu Pocket yang menjadi output utama recall.
 
 Kode DeepBrain belum ada di repo ini. Ia dibangun setelah Gerbang Fase 0.
+
+Aturan visibilitas (keputusan Patria 30 Okt 2026): README desain ini boleh tetap di repo publik BINDER. Kode dan repo DeepBrain nanti bersifat PRIVAT — bila DeepBrain di-spin-off, repo-nya privat, bukan publik.

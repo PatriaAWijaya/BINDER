@@ -52,6 +52,11 @@ TRD, AppFlow, Backend Schematic, Rencana Kerja, dan Rencana Pengerjaan Detail
 ada sebagai Google Doc di Drive MIMI/BINDER, selaras dengan PRD v1.4.
 Salinan lokal ada di folder project-binder.
 
+## Aturan visibilitas DeepBrain (keputusan Patria 30 Okt 2026)
+
+README desain DeepBrain boleh tetap di repo publik ini. Kode dan repo
+DeepBrain nanti bersifat privat.
+
 ## Yang belum ada di repo ini
 
 - Kode aplikasi BINDER baru, Sync & Gate Internal, dan DeepBrain (dibangun setelah Gerbang Fase 0).
