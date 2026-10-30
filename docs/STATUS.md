@@ -73,8 +73,8 @@ DeepBrain nanti bersifat privat.
 Legenda: [x] selesai, [~] sebagian, [ ] belum.
 
 ### Fase 0 — Persetujuan dan Verifikasi
-- [~] 0A Persetujuan PRD — PRD v1.4 DRAF sudah ditulis dan dibaca-balik; vonis setuju/revisi dari Patria BELUM ada.
-- [~] 0B Gerbang Fase 0 — lisensi Paperclip MIT (b3c2172) dan OpenMausBot Apache-2.0 (0.1.134) terverifikasi; jalur kode DIPUTUSKAN (fork); pagu DITANGGUHKAN; fork remote dibuat. BELUM: verifikasi harga sandbox/Boat/CLI, pin DeepBrain MCP, uji live Meta di dalam aplikasi baru, dan vonis Gerbang lolos.
+- [x] 0A Persetujuan PRD — PRD v1.4 DISETUJUI Patria 30 Okt 2026 ~16:51 WIB ("0A oke"). Status DRAF dicabut.
+- [~] 0B Gerbang Fase 0 — LANJUT dengan catatan (perintah Patria 30 Okt 2026 ~16:51 WIB). Lisensi Paperclip MIT (b3c2172) dan OpenMausBot Apache-2.0 (0.1.134) terverifikasi; jalur kode DIPUTUSKAN (fork); pagu DITANGGUHKAN; fork remote dibuat; harga sandbox/Boat terverifikasi 30 Okt 2026 (lihat bawah). BELUM: pin DeepBrain MCP bila ada dependensi yang diimpor, uji live Meta di dalam aplikasi baru, dan vonis Gerbang lolos dari Patria.
 
 ### Fase 1 — Fondasi dan Modul Inti
 - [~] 1A Repo dan dokumen — repo PatriaAWijaya/BINDER PUBLIK; PRD v1.4 + 5 dokumen teknis v0.3 di Drive MIMI/BINDER dan terbaca-balik; repo fork PatriaAWijaya/BINDER-paperclip PUBLIK. BELUM: persetujuan PRD.
@@ -106,3 +106,17 @@ Legenda: [x] selesai, [~] sebagian, [ ] belum.
 - [ ] Typecheck server PENUH belum terbukti di VM ini (tsc server dimatikan exit 137 pada heap 4G dan 2G; swap tidak diizinkan) — harus dijalankan di MacBook Patria atau mesin bermemori lebih besar.
 - [ ] Test (`pnpm test:run`) dan build (`pnpm build`) baseline BELUM dijalankan.
 - [x] Modifikasi pertama fork: app icon Patria dipasang (lokal 2ab8810 ↔ remote 9a66d6a); tidak ada perubahan kode/fungsi.
+
+### 0B — Verifikasi harga (30 Okt 2026, dari halaman resmi vendor, bukan ringkasan pihak ketiga kecuali Modal)
+
+Perbandingan mesin yang sama, hitung dari tarif publik (bukan penawaran):
+- Boat (docs.boat.dev/pricing, dibaca 30 Okt 2026): small 2 vCPU/4 GB = $0,018/jam; default 4 vCPU/8 GB = $0,036/jam; large 8/16 = $0,072/jam; xlarge 16/32 = $0,200/jam. Paket $20/bln = 555 jam default; sandbox berhenti = tidak kena biaya mesin; egress tidak ditagih; snapshot otomatis 14 hari. Contoh: 1 default 8 jam/hari x 22 hari = $6,34, tertutup paket $20.
+- Daytona (daytona.io/pricing, dibaca 30 Okt 2026): $0,0504/vCPU/jam + $0,0162/GiB/jam + storage $0,000108/GiB/jam setelah 5 GiB gratis; $200 kredit compute gratis; tagih per detik. Mesin 2/4 = $0,1656/jam; 4/8 = $0,3312/jam.
+- Modal (modal.com/pricing, dibaca 30 Okt 2026): Starter $0 + kredit $30/bln; Team $250/bln + kredit $100/bln; sandbox ditagih non-preemptible 3x. Angka $/core/detik tidak tampil di halaman resmi yang dibaca, jadi angka sandbox di sini memakai tarif yang konsisten di dua sumber independen + tabel perbandingan Boat: mesin 2/4 = $0,380/jam; 4/8 = $0,760/jam.
+
+Catatan yang tetap berlaku untuk 0B:
+- Pagu total pilot DITANGGUHKAN (keputusan Patria 30 Okt 13:11 WIB) — jadi 0B tidak menunggu angka pagu, dan hard stop otomatis belum bisa jalan penuh tanpa angka itu.
+- Langganan CLI belum bisa diverifikasi angkanya karena model CEO belum diputuskan (Meta via OpenCode vs Claude langsung) — tiap jalur punya langganan berbeda.
+- Pola DeepBrain Brain/agentic-stack adalah pola acuan, bukan dependensi yang diimpor: DeepBrain dibangun sebagai file + MCP sendiri, sehingga tidak ada kode berlisensi tidak jelas yang disalin. Bila nanti ada dependensi yang diimpor, pin versi + lisensinya wajib diverifikasi dulu.
+- Uji live Meta di dalam aplikasi baru BELUM bisa dilakukan — butuh build pertama yang bisa jalan dari fork (baseline penuh fork sendiri masih tertahan di VM).
+- Gerbang lolos = vonis Patria. Tanpa vonis itu, tidak lanjut ke install.
