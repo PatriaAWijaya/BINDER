@@ -2,7 +2,20 @@
 
 Tanggal mulai: 30 Oktober 2026.
 Repo: PatriaAWijaya/BINDER (privat).
-PRD acuan: PRD BINDER v1.3, Drive MIMI/BINDER (DRAF).
+PRD acuan: PRD BINDER v1.4, Drive MIMI/BINDER (DRAF — revisi arsitektur satu aplikasi).
+
+## Revisi arsitektur v1.4 — keputusan Patria 30 Oktober 2026
+
+BINDER adalah satu aplikasi baru yang merekonstruksi ulang kelebihan
+Paperclip dan MausBot menjadi satu sistem, BUKAN integrasi dua runtime.
+DeepBrain adalah bagian utama BINDER yang bersifat PnP: terpasang secara
+default di BINDER dan bisa dijalankan terpisah bila dibutuhkan, lewat
+MCP/CLI dan file git yang sama, tanpa mengubah Core.
+Sync dan Gate menjadi modul internal di dalam aplikasi baru (lihat
+`internal-sync/README.md`).
+Jalur kode (fork kode MIT/Apache lalu modifikasi vs bangun ulang bersih
+terinspirasi pola) BELUM diputuskan dan diputuskan di Gerbang Fase 0
+sebelum build.
 
 ## Revisi pagu — keputusan Patria 30 Oktober 2026
 
@@ -15,14 +28,15 @@ otomatis atas pagu yang belum ditetapkan.
 
 ## Checklist Gerbang Fase 0 (gerbang keseluruhan belum lolos)
 
-- [x] Verifikasi LICENSE Paperclip (MIT) dari repo yang dipakai — terverifikasi 30 Okt 2026, commit clone b3c2172.
-- [x] Verifikasi LICENSE OpenMausBot (Apache-2.0) dari repo yang dipakai — terverifikasi 30 Okt 2026, versi 0.1.134, commit clone 0213b74.
+- [x] Verifikasi LICENSE Paperclip (MIT) dari repo yang dipakai — terverifikasi 30 Okt 2026, commit clone b3c2172 (kini pola acuan Inti Perusahaan).
+- [x] Verifikasi LICENSE OpenMausBot (Apache-2.0) dari repo yang dipakai — terverifikasi 30 Okt 2026, versi 0.1.134, commit clone 0213b74 (kini pola acuan Mesin Desktop).
 - [ ] Verifikasi lisensi dependensi DeepBrain (pola Brain/agentic-stack); bila tidak memungkinkan, bangun ulang polanya tanpa menyalin kode yang lisensinya tidak jelas.
-- [ ] Pin versi Paperclip, plugin SDK, MausBot, dan DeepBrain MCP.
+- [ ] Keputusan jalur kode: fork lalu modifikasi vs bangun ulang bersih terinspirasi pola.
+- [ ] Pin versi DeepBrain MCP dan dependensi yang dipakai; pin upstream hanya bila jalur fork diputuskan.
 - [ ] Verifikasi harga sandbox (Modal/Daytona), Boat bila dipakai, dan langganan CLI.
 - [ ] Pagu total pilot — DITANGGUHKAN per keputusan Patria 30 Okt 2026 (bukan dibatalkan); dipatok setelah observasi kebutuhan riil.
-- [ ] Uji live jalur Meta lewat OpenCode di dalam Paperclip (dan di MausBot bila dipakai di sana); catat lolos/gagal apa adanya. Bukti yang sudah ada baru panggilan API langsung di hackathon, bukan bukti jalur di dalam Paperclip/MausBot.
-- [ ] Vonis Patria: Gerbang Fase 0 lolos atau tidak.
+- [ ] Uji live jalur Meta lewat OpenCode di dalam aplikasi BINDER baru; catat lolos/gagal apa adanya. Bukti yang sudah ada baru panggilan API langsung di hackathon, bukan bukti jalur di dalam aplikasi baru.
+- [ ] Vonis Patria: PRD v1.4 disetujui dan Gerbang Fase 0 lolos atau tidak.
 
 ## Clone inspeksi (selesai 30 Oktober 2026)
 
@@ -31,13 +45,13 @@ otomatis atas pagu yang belum ditetapkan.
 
 Clone ini hanya untuk inspeksi Gerbang Fase 0, bukan install dan bukan build.
 
-## Dokumen teknis (DRAF v0.1, direvisi pagu 30 Oktober 2026)
+## Dokumen teknis (DRAF v0.2, revisi arsitektur 30 Oktober 2026)
 
-TRD, AppFlow, Backend Schematic, dan Rencana Kerja (Tahap 0–13) ada sebagai
-Google Doc di Drive MIMI/BINDER, dengan catatan revisi pagu yang sama seperti
-di atas. Salinan lokal ada di folder project-binder.
+TRD, AppFlow, Backend Schematic, Rencana Kerja, dan Rencana Pengerjaan Detail
+ada sebagai Google Doc di Drive MIMI/BINDER, selaras dengan PRD v1.4.
+Salinan lokal ada di folder project-binder.
 
 ## Yang belum ada di repo ini
 
-- Kode Binder Sync, Binder Gate, dan DeepBrain (dibangun setelah Gerbang Fase 0).
+- Kode aplikasi BINDER baru, Sync & Gate Internal, dan DeepBrain (dibangun setelah Gerbang Fase 0).
 - File LICENSE BINDER (belum diputuskan Patria).
