@@ -4,8 +4,8 @@ Repo ini TIDAK menyalin kode Paperclip atau OpenMausBot.
 
 | Komponen | Repo upstream | Lisensi menurut PRD | Status verifikasi |
 |---|---|---|---|
-| Paperclip (backbone) | `paperclipai/paperclip` | MIT | Belum terverifikasi dari clone — menunggu Gerbang Fase 0 |
-| OpenMausBot (slice desktop/VM) | `milind-soni/OpenMausBot` | Apache-2.0 | Belum terverifikasi dari clone — menunggu Gerbang Fase 0 |
+| Paperclip (backbone) | `paperclipai/paperclip` | MIT | Terverifikasi 30 Okt 2026 dari clone — commit b3c2172 |
+| OpenMausBot (slice desktop/VM) | `milind-soni/OpenMausBot` | Apache-2.0 | Terverifikasi 30 Okt 2026 dari clone — v0.1.134, commit 0213b74 |
 
 Aturan:
 
