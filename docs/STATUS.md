@@ -17,6 +17,12 @@ Jalur kode (fork kode MIT/Apache lalu modifikasi vs bangun ulang bersih
 terinspirasi pola) BELUM diputuskan dan diputuskan di Gerbang Fase 0
 sebelum build.
 
+## Repo BINDER menjadi PUBLIK — keputusan Patria 30 Oktober 2026
+
+PatriaAWijaya/BINDER diubah dari privat menjadi publik. Dokumen teknis
+di Drive sudah naik ke v0.3 dan selaras dengan keputusan terbaru: fork,
+BINDER publik, dan DeepBrain (desain boleh publik, kode/repo privat).
+
 ## Revisi pagu — keputusan Patria 30 Oktober 2026
 
 Pagu harga DITANGGUHKAN. Tiap model punya billing sendiri yang dipantau Patria
