@@ -1,8 +1,8 @@
 # Status BINDER — Gerbang Fase 0
 
 Tanggal mulai: 30 Oktober 2026.
-Repo: PatriaAWijaya/BINDER (privat).
-PRD acuan: PRD BINDER v1.4, Drive MIMI/BINDER (DRAF — revisi arsitektur satu aplikasi).
+Repo: PatriaAWijaya/BINDER (PUBLIK sejak 30 Oktober 2026).
+PRD acuan: PRD BINDER v1.4, Drive MIMI/BINDER (DISETUJUI — vonis 0A Patria 30 Oktober 2026).
 
 ## Revisi arsitektur v1.4 — keputusan Patria 30 Oktober 2026
 
@@ -13,9 +13,9 @@ default di BINDER dan bisa dijalankan terpisah bila dibutuhkan, lewat
 MCP/CLI dan file git yang sama, tanpa mengubah Core.
 Sync dan Gate menjadi modul internal di dalam aplikasi baru (lihat
 `internal-sync/README.md`).
-Jalur kode (fork kode MIT/Apache lalu modifikasi vs bangun ulang bersih
-terinspirasi pola) BELUM diputuskan dan diputuskan di Gerbang Fase 0
-sebelum build.
+Jalur kode DIPUTUSKAN di Gerbang Fase 0 (30 Oktober 2026): fork dulu lalu
+modifikasi; UI dan semua fungsi awal dipertahankan, modifikasi hanya bila
+Patria memerintahkan.
 
 ## Repo BINDER menjadi PUBLIK — keputusan Patria 30 Oktober 2026
 
@@ -32,18 +32,35 @@ berlaku setelah pagu dipatok; kontrol interim adalah ledger per task + review
 mingguan + pantauan billing bulanan Patria. Gate tidak boleh mengklaim hard stop
 otomatis atas pagu yang belum ditetapkan.
 
-## Checklist Gerbang Fase 0 (gerbang keseluruhan belum lolos)
+## Checklist Gerbang Fase 0 — LOLOS DENGAN CATATAN (vonis Patria 31 Oktober 2026)
+
+Catatan vonis yang tetap berlaku (bukan syarat yang membatalkan lolosnya gerbang,
+melainkan pekerjaan/keputusan yang dibawa ke depan):
+- Pagu total pilot tetap DITANGGUHKAN; hard stop otomatis belum bisa jalan penuh
+  tanpa angka pagu; kontrol interim = ledger per task + review mingguan +
+  pantauan billing bulanan Patria.
+- Harga langganan CLI belum terverifikasi karena model CEO belum diputuskan
+  (Meta via OpenCode vs Claude langsung).
+- Pin versi + lisensi wajib diverifikasi dulu bila ada dependensi DeepBrain
+  yang diimpor; selama ini DeepBrain dibangun sebagai file + MCP sendiri.
+- Uji live Meta di dalam aplikasi baru masih menunggu build pertama yang bisa jalan.
+- Keputusan yang masih menunggu vonis Patria: provider sandbox (Modal vs Daytona),
+  model CEO, default VM pilot (Local VM Docker/Podman vs Boat), Pocket pertama,
+  model ekstraksi Distiller, bobot skor Pocket, nama perusahaan final + proyek
+  pilot pertama, anggaran token, dan detail kadens Leads.
+- Modifikasi kode fork tetap hanya atas perintah spesifik Patria; lolosnya gerbang
+  BUKAN perintah modifikasi.
 
 - [x] Verifikasi LICENSE Paperclip (MIT) dari repo yang dipakai — terverifikasi 30 Okt 2026, commit clone b3c2172 (kini pola acuan Inti Perusahaan).
 - [x] Verifikasi LICENSE OpenMausBot (Apache-2.0) dari repo yang dipakai — terverifikasi 30 Okt 2026, versi 0.1.134, commit clone 0213b74 (kini pola acuan Mesin Desktop).
 - [ ] Verifikasi lisensi dependensi DeepBrain (pola Brain/agentic-stack); bila tidak memungkinkan, bangun ulang polanya tanpa menyalin kode yang lisensinya tidak jelas.
-- [x] Keputusan jalur kode — DIPUTUSKAN 30 Okt 2026: fork dulu lalu modifikasi. UI dan semua fungsi awal dipertahankan; modifikasi hanya bila Patria memerintahkan. Dimulai dari Paperclip sebagai rancangan organisasi utama Binder. Fork lokal: `~/workspace/binder-fork/paperclip` (commit b3c2172, bersih, tanpa modifikasi); destinasi fork remote belum diputuskan.
+- [x] Keputusan jalur kode — DIPUTUSKAN 30 Okt 2026: fork dulu lalu modifikasi. UI dan semua fungsi awal dipertahankan; modifikasi hanya bila Patria memerintahkan. Dimulai dari Paperclip sebagai rancangan organisasi utama Binder. Fork lokal: `~/workspace/binder-fork/paperclip` (commit b3c2172, bersih, tanpa modifikasi); fork remote: PatriaAWijaya/BINDER-paperclip (lihat butir fork remote di bawah).
 - [ ] Pin versi DeepBrain MCP dan dependensi yang dipakai; pin upstream hanya bila jalur fork diputuskan.
 - [ ] Verifikasi harga sandbox (Modal/Daytona), Boat bila dipakai, dan langganan CLI.
 - [ ] Pagu total pilot — DITANGGUHKAN per keputusan Patria 30 Okt 2026 (bukan dibatalkan); dipatok setelah observasi kebutuhan riil.
 - [ ] Uji live jalur Meta lewat OpenCode di dalam aplikasi BINDER baru; catat lolos/gagal apa adanya. Bukti yang sudah ada baru panggilan API langsung di hackathon, bukan bukti jalur di dalam aplikasi baru.
 - [x] Fork remote — DIBUAT 30 Okt 2026: PatriaAWijaya/BINDER-paperclip (https://github.com/PatriaAWijaya/BINDER-paperclip), fork dari paperclipai/paperclip, branch default master, HEAD master = b3c2172 (tree identik dengan baseline lokal; HEAD upstream saat fork dibuat sudah maju ke 81ebe47 dan sengaja di-reset ke baseline). Sifat: PUBLIK (fork dari repo publik). UI dan fungsi awal belum diubah.
-- [ ] Vonis Patria: PRD v1.4 disetujui dan Gerbang Fase 0 lolos atau tidak.
+- [x] Vonis Patria: PRD v1.4 disetujui (0A, 30 Okt 2026) dan Gerbang Fase 0 LOLOS DENGAN CATATAN (31 Okt 2026).
 
 ## Clone inspeksi (selesai 30 Oktober 2026)
 
@@ -52,7 +69,7 @@ otomatis atas pagu yang belum ditetapkan.
 
 Clone ini hanya untuk inspeksi Gerbang Fase 0, bukan install dan bukan build.
 
-## Dokumen teknis (DRAF v0.2, revisi arsitektur 30 Oktober 2026)
+## Dokumen teknis (v0.3, revisi arsitektur 30 Oktober 2026)
 
 TRD, AppFlow, Backend Schematic, Rencana Kerja, dan Rencana Pengerjaan Detail
 ada sebagai Google Doc di Drive MIMI/BINDER, selaras dengan PRD v1.4.
@@ -74,10 +91,10 @@ Legenda: [x] selesai, [~] sebagian, [ ] belum.
 
 ### Fase 0 — Persetujuan dan Verifikasi
 - [x] 0A Persetujuan PRD — PRD v1.4 DISETUJUI Patria 30 Okt 2026 ~16:51 WIB ("0A oke"). Status DRAF dicabut.
-- [~] 0B Gerbang Fase 0 — LANJUT dengan catatan (perintah Patria 30 Okt 2026 ~16:51 WIB). Lisensi Paperclip MIT (b3c2172) dan OpenMausBot Apache-2.0 (0.1.134) terverifikasi; jalur kode DIPUTUSKAN (fork); pagu DITANGGUHKAN; fork remote dibuat; harga sandbox/Boat terverifikasi 30 Okt 2026 (lihat bawah). BELUM: pin DeepBrain MCP bila ada dependensi yang diimpor, uji live Meta di dalam aplikasi baru, dan vonis Gerbang lolos dari Patria.
+- [x] 0B Gerbang Fase 0 — LOLOS DENGAN CATATAN (vonis Patria 31 Okt 2026). Lisensi Paperclip MIT (b3c2172) dan OpenMausBot Apache-2.0 (0.1.134) terverifikasi; jalur kode DIPUTUSKAN (fork); pagu DITANGGUHKAN; fork remote dibuat; harga sandbox/Boat terverifikasi 30 Okt 2026 (lihat bawah). Catatan yang dibawa ke depan: lihat daftar catatan vonis di atas (pagu, harga CLI, pin DeepBrain bila impor, uji live Meta in-app, dan keputusan provider/model/VM/Pocket yang masih menunggu vonis).
 
 ### Fase 1 — Fondasi dan Modul Inti
-- [~] 1A Repo dan dokumen — repo PatriaAWijaya/BINDER PUBLIK; PRD v1.4 + 5 dokumen teknis v0.3 di Drive MIMI/BINDER dan terbaca-balik; repo fork PatriaAWijaya/BINDER-paperclip PUBLIK. BELUM: persetujuan PRD.
+- [~] 1A Repo dan dokumen — repo PatriaAWijaya/BINDER PUBLIK; PRD v1.4 DISETUJUI + 5 dokumen teknis v0.3 di Drive MIMI/BINDER dan terbaca-balik; repo fork PatriaAWijaya/BINDER-paperclip PUBLIK. Sisa 1A: verifikasi baseline fork (test/build) dan pencatatan hasil finalnya.
 - [ ] 1B Modul Inti Perusahaan + CEO — belum dibangun. Persiapan saja: fork lokal dari b3c2172, `pnpm install` lolos.
 - [ ] 1C DeepBrain Core + MCP/CLI — desain selesai (PRD Bab 8, README); kode BELUM dibangun. Aturan: desain boleh publik, kode/repo nanti PRIVAT.
 - [ ] 1D Sync & Gate Internal — desain/kontrak selesai; kode dan uji bypass BELUM.
@@ -101,10 +118,10 @@ Legenda: [x] selesai, [~] sebagian, [ ] belum.
 - [ ] Vendor recall tambahan, spin-off DeepBrain, agen/konektor tambahan, tinjau ulang pagu — BELUM, dan tidak dimulai sebelum live stabil.
 
 ### Verifikasi baseline fork (di luar modul, dicatat jujur)
-- [x] `pnpm install --frozen-lockfile` lolos (6m28s).
-- [x] Typecheck paket lain lolos; pemeriksaan Rust paperclip-runner-core lolos (7 peringatan).
-- [ ] Typecheck server PENUH belum terbukti di VM ini (tsc server dimatikan exit 137 pada heap 4G dan 2G; swap tidak diizinkan) — harus dijalankan di MacBook Patria atau mesin bermemori lebih besar.
-- [ ] Test (`pnpm test:run`) dan build (`pnpm build`) baseline BELUM dijalankan.
+- [x] `pnpm install --frozen-lockfile` lolos (VM 6m28s; MacBook 24m10s).
+- [x] Typecheck PENUH lolos di MacBook (30 paket termasuk server; Rust hanya peringatan) — menutup kegagalan VM exit 137 yang terbukti lingkungan, bukan kode.
+- [~] Test (`pnpm test:run`): test3 selesai 9 gagal dari 28.652, semua terdiagnosis (7 timeout flaky lolos di rerun terarah; 2 test git akarnya config sistem Apple MacBook `init.defaultbranch=main`, terbukti karena rerun workspace-runtime dengan override env saja = 179/179 lolos). Test4 full run dengan override sedang berjalan sebagai konfirmasi satu angka bersih.
+- [ ] Build (`pnpm build`) baseline — antre setelah test4 lolos.
 - [x] Modifikasi pertama fork: app icon Patria dipasang (lokal 2ab8810 ↔ remote 9a66d6a); tidak ada perubahan kode/fungsi.
 
 ### 0B — Verifikasi harga (30 Okt 2026, dari halaman resmi vendor, bukan ringkasan pihak ketiga kecuali Modal)
@@ -119,4 +136,4 @@ Catatan yang tetap berlaku untuk 0B:
 - Langganan CLI belum bisa diverifikasi angkanya karena model CEO belum diputuskan (Meta via OpenCode vs Claude langsung) — tiap jalur punya langganan berbeda.
 - Pola DeepBrain Brain/agentic-stack adalah pola acuan, bukan dependensi yang diimpor: DeepBrain dibangun sebagai file + MCP sendiri, sehingga tidak ada kode berlisensi tidak jelas yang disalin. Bila nanti ada dependensi yang diimpor, pin versi + lisensinya wajib diverifikasi dulu.
 - Uji live Meta di dalam aplikasi baru BELUM bisa dilakukan — butuh build pertama yang bisa jalan dari fork (baseline penuh fork sendiri masih tertahan di VM).
-- Gerbang lolos = vonis Patria. Tanpa vonis itu, tidak lanjut ke install.
+- Gerbang LOLOS DENGAN CATATAN per vonis Patria 31 Okt 2026 (lihat daftar catatan di atas). Lolosnya gerbang BUKAN perintah modifikasi kode — modifikasi fork tetap hanya atas perintah spesifik Patria.
