@@ -96,7 +96,7 @@ Legenda: [x] selesai, [~] sebagian, [ ] belum.
 ### Fase 1 — Fondasi dan Modul Inti
 - [~] 1A Repo dan dokumen — repo PatriaAWijaya/BINDER PUBLIK; PRD v1.4 DISETUJUI + 5 dokumen teknis v0.3 di Drive MIMI/BINDER dan terbaca-balik; repo fork PatriaAWijaya/BINDER-paperclip PUBLIK. Sisa 1A: verifikasi baseline fork (test/build) dan pencatatan hasil finalnya.
 - [ ] 1B Modul Inti Perusahaan + CEO — belum dibangun. Persiapan saja: fork lokal dari b3c2172, `pnpm install` lolos.
-- [ ] 1C DeepBrain Core + MCP/CLI — desain selesai (PRD Bab 8, README); kode BELUM dibangun. Aturan: desain boleh publik, kode/repo nanti PRIVAT.
+- [ ] 1C DeepBrain Core + MCP/CLI — desain selesai (PRD Bab 8, README); KEPUTUSAN 31 Okt 2026 (Patria): dibangun dari scratch v1 file-first, BUKAN dari repo dasar; Mem0 hanya kandidat akselerator recall Fase 2. Kode BELUM dibangun. Aturan: desain boleh publik, kode/repo nanti PRIVAT.
 - [ ] 1D Sync & Gate Internal — desain/kontrak selesai; kode dan uji bypass BELUM.
 - [ ] 1E Mesin Desktop + VM — desain selesai; kode dan task desktop pilot BELUM.
 - [ ] 1F Routing model + QC + checkpoint swap — desain selesai; uji packet/QC BELUM.
