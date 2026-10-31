@@ -39,13 +39,15 @@ melainkan pekerjaan/keputusan yang dibawa ke depan):
 - Pagu total pilot tetap DITANGGUHKAN; hard stop otomatis belum bisa jalan penuh
   tanpa angka pagu; kontrol interim = ledger per task + review mingguan +
   pantauan billing bulanan Patria.
-- Harga langganan CLI belum terverifikasi karena model CEO belum diputuskan
-  (Meta via OpenCode vs Claude langsung).
+- Model CEO DIPUTUSKAN 31 Okt 2026 (vonis Patria: Meta via OpenCode, Muse
+  Spark 1.3 Standard; fallback Claude; tier Contributor DITOLAK karena Meta
+  boleh melatih dari prompt). Jalur ini tagihan per token, bukan langganan —
+  verifikasi angka CLI menyusul wiring produksi.
 - Pin versi + lisensi wajib diverifikasi dulu bila ada dependensi DeepBrain
   yang diimpor; selama ini DeepBrain dibangun sebagai file + MCP sendiri.
 - Uji live Meta di dalam aplikasi baru masih menunggu build pertama yang bisa jalan.
 - Keputusan yang masih menunggu vonis Patria: provider sandbox (Modal vs Daytona),
-  model CEO, default VM pilot (Local VM Docker/Podman vs Boat), Pocket pertama,
+  default VM pilot (Local VM Docker/Podman vs Boat), Pocket pertama,
   model ekstraksi Distiller, bobot skor Pocket, nama perusahaan final + proyek
   pilot pertama, anggaran token, dan detail kadens Leads.
 - Modifikasi kode fork tetap hanya atas perintah spesifik Patria; lolosnya gerbang
@@ -133,7 +135,7 @@ Perbandingan mesin yang sama, hitung dari tarif publik (bukan penawaran):
 
 Catatan yang tetap berlaku untuk 0B:
 - Pagu total pilot DITANGGUHKAN (keputusan Patria 30 Okt 13:11 WIB) — jadi 0B tidak menunggu angka pagu, dan hard stop otomatis belum bisa jalan penuh tanpa angka itu.
-- Langganan CLI belum bisa diverifikasi angkanya karena model CEO belum diputuskan (Meta via OpenCode vs Claude langsung) — tiap jalur punya langganan berbeda.
+- Model CEO DIPUTUSKAN 31 Okt 2026 (vonis Patria: Meta via OpenCode, Muse Spark 1.3 Standard; fallback Claude) — jalur ini tagihan per token, bukan langganan; verifikasi angka CLI menyusul wiring produksi.
 - Pola DeepBrain Brain/agentic-stack adalah pola acuan, bukan dependensi yang diimpor: DeepBrain dibangun sebagai file + MCP sendiri, sehingga tidak ada kode berlisensi tidak jelas yang disalin. Bila nanti ada dependensi yang diimpor, pin versi + lisensinya wajib diverifikasi dulu.
 - Uji live Meta di dalam aplikasi baru MASIH MENUNGGU — baseline penuh fork kini LOLOS di MacBook (build 31 Okt ~08:58), tetapi uji ini butuh wiring produksi modul 1B/1F ke model nyata, yang masih tersisa.
 - Gerbang LOLOS DENGAN CATATAN per vonis Patria 31 Okt 2026 (lihat daftar catatan di atas). Lolosnya gerbang BUKAN perintah modifikasi kode — modifikasi fork tetap hanya atas perintah spesifik Patria.
